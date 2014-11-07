@@ -1,0 +1,58 @@
+<h1> Add Student Form </h1>
+
+<%= form_for :student , url: students_path do |f|  %>
+
+    <%  if @student.errors.any? %>
+        <div id="error" >
+          <h2>
+            <%= pluralize( @student.errors.count , "error") %> prohibited this article form being saved :
+          </h2>
+          <ul>
+            <% @student.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <%end %>
+          </ul>
+        </div>
+    <% end %>
+
+
+    <p>
+      <%= f.label :first_name %> :
+      <%= f.text_field :first_name %>
+    </p>
+    <p>
+      <%= f.label :last_name %> :
+      <%= f.text_field :last_name %>
+    </p>
+    <p>
+      <%= f.label :Class %> :
+      <%= f.text_field :in_class %>
+    </p>
+    <p>
+      <%= f.label :Section %> :
+      <%= f.text_field :section %>
+    </p>
+    <p>
+      <%= f.label :roll_no %> :
+      <%= f.text_field :roll_no %>
+    </p>
+    <p>
+      <%= f.label :admin_no %> :
+      <%= f.text_field :admin_no %>
+    </p>
+
+    <p>
+      <%= f.label :contact_no %> :
+      <%= f.text_field :contact_no %>
+    </p>
+
+    <p>
+      <%= f.label :bus_route %> :
+      <%= f.text_field :bus_route %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+

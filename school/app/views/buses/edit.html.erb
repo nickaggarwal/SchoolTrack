@@ -1,0 +1,46 @@
+<h1> Edit Student Form </h1>
+
+<%= form_for :bus , url: bus_path(@bus) , method: :patch do |f|  %>
+
+    <%  if @bus.errors.any? %>
+        <div id="error" >
+          <h2>
+            <%= pluralize( @bus.errors.count , "error") %> prohibited this article form being saved :
+          </h2>
+          <ul>
+            <% @bus.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <%end %>
+          </ul>
+        </div>
+    <% end %>
+
+
+    <p>
+      <%= f.label :no_of_students %> :
+      <%= f.text_field :no_of_students %>
+    </p>
+    <p>
+      <%= f.label :start_location %> :
+      <%= f.text_field :start_location %>
+    </p>
+    <p>
+      <%= f.label :end_location %> :
+      <%= f.text_field :end_location %>
+    </p>
+    <p>
+      <%= f.label :driver_name %> :
+      <%= f.text_field :driver_name %>
+    </p>
+    <p>
+      <%= f.label :driver_contact %> :
+      <%= f.text_field :driver_contact %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+<%= link_to 'Back' , students_path %>
+

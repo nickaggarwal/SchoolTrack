@@ -1,0 +1,43 @@
+<h1> All students </h1>
+
+<table>
+
+  <tr>
+    <th> No Of Students </th>
+    <th> Start Location </th>
+    <th> End Location </th>
+    <th> Driver NAme </th>
+    <th> Driver Contact </th>
+    <th colspan="3" ></th>
+
+  </tr>
+
+    <% @buses.each do |bus| %>
+      <tr>
+        <td>
+          <%= bus.no_of_students %>
+        </td>
+        <td>
+          <%= bus.start_location %>
+        </td>
+        <td>
+          <%= bus.end_location %>
+        </td>
+        <td>
+          <%= bus.driver_name %>
+        </td>
+        <td>
+          <%= bus.driver_contact %>
+        </td>
+        <td>
+          <%= link_to 'Show' , bus_path(bus)  %>
+        </td>
+        <td>
+          <%= link_to 'Edit' , edit_bus_path(bus)  %>
+        </td>
+        <td>
+          <%= link_to 'Delete' , bus_path(bus) , method: :delete , data: { confirm: 'Are you sure ?'}  %>
+        </td>
+    <% end %>
+
+</table>
