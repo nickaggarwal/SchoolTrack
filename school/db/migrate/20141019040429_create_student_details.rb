@@ -5,9 +5,9 @@ class CreateStudentDetails < ActiveRecord::Migration
       t.string :last_name , limit: 50
       t.integer :in_class
       t.string :section
-      t.integer :roll_no
-      t.integer :admin_no
-      t.integer :contact_no
+      t.string :roll_no
+      t.string :admin_no
+      t.string :contact_no
       t.integer :bus_route
       t.timestamps null: false
     end
