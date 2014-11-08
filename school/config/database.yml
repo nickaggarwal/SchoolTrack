@@ -9,7 +9,7 @@ development:
   adapter: mysql2
   database: schooltrack
   username: schooltrack
-  password: School@123$
+  password: School!123$
   host: schooltrack.cwv3t2tlxauf.ap-southeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock
 
@@ -21,7 +21,7 @@ test:
   adapter: mysql2
   database: schooltrack
   username: schooltrack
-  password: School@123$
+  password: School!123$
   host: schooltrack.cwv3t2tlxauf.ap-southeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock
 
@@ -29,6 +29,6 @@ production:
   adapter: mysql2
   database: schooltrack
   username: schooltrack
-  password: School@123$
+  password: School!123$
   host: schooltrack.cwv3t2tlxauf.ap-southeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock
