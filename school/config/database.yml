@@ -7,10 +7,10 @@
 
 development:
   adapter: mysql2
-  database: school_track
-  username: root
-  password:
-  host: localhost
+  database: schooltrack
+  username: schooltrack
+  password: School@123$
+  host: schooltrack.cwv3t2tlxauf.ap-southeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -19,16 +19,16 @@ development:
 
 test:
   adapter: mysql2
-  database: school_track
-  username: root
-  password:
-  host: localhost
+  database: schooltrack
+  username: schooltrack
+  password: School@123$
+  host: schooltrack.cwv3t2tlxauf.ap-southeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock
-  
+
 production:
   adapter: mysql2
-  database: school_track
-  username: root
-  password:
-  host: localhost
+  database: schooltrack
+  username: schooltrack
+  password: School@123$
+  host: schooltrack.cwv3t2tlxauf.ap-southeast-1.rds.amazonaws.com
   socket: /tmp/mysql.sock
